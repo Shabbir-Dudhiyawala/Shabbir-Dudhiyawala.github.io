@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-image: url("maaraz_pic.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      h4 {
+        color: #00b2ca;
+      }
+      #raza {
+        color: #7dcfb6;
+        font-size: huge;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .center {
+        padding: 70px 70px;
+        text-align: center;
+      }
+
+      .button {
+        display: inline-block;
+        border-radius: 50px;
+        background-color: rgb(0, 81, 128);
+        border: none;
+        color: #7dcfb6;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .button:hover span {
+        padding-right: 25px;
+      }
+
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+      .lbl {
+        color: #00b2ca;
+        font-size: xx-large;
+      }
+
+      #fname {
+        width: auto;
+        padding: 5px;
+        counter-reset: none;
+      }
+
+      .demo {
+        font-size: xx-large;
+        color: #7dcfb6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h4>Enter your ITS for raza araz</h4>
+      <br />
+      <!-- <form> -->
+      <div class="mb-3">
+        <label for="barcodeInput" class="form-label"
+          >Scan Barcode or NFC:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="barcodeInput"
+          placeholder="Scan the barcode or NFC tag"
+          autofocus
+          onmouseover="this.focus();"
+        />
+      </div>
+      <!-- <button class="button" id="main" type="submit">SUBMIT</button> -->
+      <!-- </form> -->
+
+      <br />
+
+      <!-- <button class="button" onclick="window.location.reload();">
+        <span>CLEAR</span>
+      </button> -->
+      <br />
+      <p id="demo" class="demo"></p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
