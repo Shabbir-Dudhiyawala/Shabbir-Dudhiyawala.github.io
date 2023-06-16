@@ -14,8 +14,7 @@ $(document).ready(function () {
 
     //   Make the AJAX request
     $.get(url, function (data, status) {
-      console.log(status);
-      console.log(data);
+         barcodeInput.value = "";
     });
   }
 });
