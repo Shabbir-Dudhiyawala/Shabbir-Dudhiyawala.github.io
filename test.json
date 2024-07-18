@@ -1,1 +1,22 @@
-{ "arabic": "الله تع", "english": "Allah TA", "category": "Name" }
+[
+  {
+    "arabic": "الله تع",
+    "english": "Allah TA",
+    "category": "Name"
+  },
+  {
+    "arabic": "مكة",
+    "english": "Mecca",
+    "category": "Place"
+  },
+  {
+    "arabic": "محمد",
+    "english": "Muhammad",
+    "category": "Name"
+  },
+  {
+    "arabic": "المدينة",
+    "english": "Medina",
+    "category": "Place"
+  }
+]
