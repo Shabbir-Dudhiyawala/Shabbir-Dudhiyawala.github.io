@@ -1,22 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeeyy! Finally</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #ff69b4;
+        --secondary-color: #ffc0cb;
+        --text-color: #333333;
+        --background-color: #fff0f5;
+        --whatsapp-color: #25d366;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--background-color);
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+      }
+
+      .container {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        text-align: center;
+        max-width: 90%;
+        width: 400px;
+      }
+
+      .header_text {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .gif_container {
+        margin-bottom: 1.5rem;
+      }
+
+      .gif_container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .message {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        background-color: var(--whatsapp-color);
+        color: white;
+        font-weight: 600;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn:hover {
+        background-color: #128c7e;
+        transform: translateY(-2px);
+      }
+
+      .credit {
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 1.5rem;
+      }
+
+      .credit a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 1.5rem;
+        }
+
+        .header_text {
+          font-size: 1.5rem;
+        }
+
+        .message {
+          font-size: 1rem;
+        }
+
+        .btn {
+          padding: 0.7rem 1.2rem;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <div>
-        <h1 class="header_text">Yeeyy ! Finally</h1>
-      </div>
+      <h1 class="header_text">Yeeyy! Finally</h1>
+
       <div class="gif_container">
         <img
           src="https://i.postimg.cc/wTDG30TB/yes.gif"
           alt="Cute animated illustration"
         />
       </div>
-      <button class="btn" id="yesButton" onclick="nextPage()">
-        Let's Fix a Date
-      </button>
+
+      <p class="message">Let's chat and plan our date!</p>
+
+      <a href="#" class="btn" id="whatsappButton">Message me on WhatsApp</a>
+
+      <p class="credit">
+        Created for
+        <a href="">ML</a>
+      </p>
     </div>
+
+    <script>
+      document
+        .getElementById("whatsappButton")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const phoneNumber = "+917698867599"; // Replace with your actual phone number
+          const message = encodeURIComponent(
+            "Hi! I'd love to go out with you. When are you free?"
+          );
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+          window.open(whatsappUrl, "_blank");
+        });
+    </script>
   </body>
 </html>
